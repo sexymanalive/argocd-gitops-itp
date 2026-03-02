@@ -3,8 +3,8 @@ kind: Ingress
 metadata:
   name: nginx-ingress
   annotations: 
-    cert-manager.io/cluster-issuer: "letsencrypt-stag"
-    #cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    #cert-manager.io/cluster-issuer: "letsencrypt-stag"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
     kubernetes.io/ingressClassName: "nginx"
 spec:
   ingressClassName: "nginx"
