@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: nginx-dpl
 spec:
+  replicas: 4
   selector:
     matchLabels:
       app: nginx-app
@@ -13,7 +14,8 @@ spec:
     spec:
       containers:
       - name: nginx-app
-        image: nginx:alpine 
+        #image: nginx:alpine
+        image: 69966/earthdx:78 
         # HPA -> you will need to define the resources
         ports:
         - containerPort: 80
